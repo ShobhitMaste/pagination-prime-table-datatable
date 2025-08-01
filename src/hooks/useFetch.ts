@@ -29,7 +29,7 @@ export default function useFetch<T>(url : string): FetchState<T> {
                 const json = jsons.data;
                 const actualData = [];
                 json.forEach(element => {
-                    const requiredData = (({title, place_of_origin, artist_display, inscriptions, date_start, date_end}) => ({title, place_of_origin, artist_display, inscriptions, date_start, date_end}))(element);
+                    const requiredData = (({title, place_of_origin, artist_display, inscriptions, date_start, date_end, id}) => ({title, place_of_origin, artist_display, inscriptions, date_start, date_end, id}))(element);
                     actualData.push(requiredData);
                 });
                 if(isMounted){
