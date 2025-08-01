@@ -1,4 +1,4 @@
-# 🎨 PrimeReact DataTable with Pagination and Multi-Page Row Selection
+# PrimeReact DataTable with Pagination and Multi-Page Row Selection
 
 This project demonstrates how to build a paginated data table using **PrimeReact** that supports:
 
@@ -8,7 +8,7 @@ This project demonstrates how to build a paginated data table using **PrimeReact
 - Dynamic UI controls using overlay panels
 ---
 
-## 🚀 Features
+## Features
 
 - ✅ Paginated table using `Paginator`
 - ✅ Checkbox selection with PrimeReact `DataTable`
@@ -19,7 +19,7 @@ This project demonstrates how to build a paginated data table using **PrimeReact
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### 1. Clone the repository
 
@@ -44,7 +44,7 @@ npm start
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - [React](https://reactjs.org/)
 - [PrimeReact](https://primereact.org/)
@@ -53,7 +53,7 @@ npm start
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 ### Data Fetching
 
@@ -75,7 +75,7 @@ npm start
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -89,7 +89,7 @@ src/
 
 ---
 
-## 🔧 Customization
+## Customization
 
 - You can modify the API endpoint in `baseURL` to fetch different data.
 - Adjust the row selection logic to work with different batch sizes.
@@ -97,13 +97,6 @@ src/
 
 ---
 
-## 📄 License
+## Author
 
-This project is licensed under the MIT License.
-
----
-
-## 🙋‍♂️ Author
-
-Created by [Your Name]  
-Feel free to contribute or open issues!
+Created by Shobhit Singh
