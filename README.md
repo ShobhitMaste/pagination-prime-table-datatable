@@ -38,8 +38,6 @@ npm install
 
 ```bash
 npm run dev
-# or
-npm start
 ```
 
 ---
