@@ -27,7 +27,7 @@ It integrates the public **Art Institute of Chicago API** to fetch and display a
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/primereact-pagination-example.git
+git clone https://github.com/ShobhitMaste/pagination-prime-table-datatable.git
 cd primereact-pagination-example
 ```
 
