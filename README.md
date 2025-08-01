@@ -6,9 +6,6 @@ This project demonstrates how to build a paginated data table using **PrimeReact
 - Multi-page selection using batch input
 - API-based pagination
 - Dynamic UI controls using overlay panels
-
-It integrates the public **Art Institute of Chicago API** to fetch and display artworks.
-
 ---
 
 ## 🚀 Features
