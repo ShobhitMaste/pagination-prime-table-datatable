@@ -1,69 +1,112 @@
-# React + TypeScript + Vite
+# 🎨 PrimeReact DataTable with Pagination and Multi-Page Row Selection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates how to build a paginated data table using **PrimeReact** that supports:
 
-Currently, two official plugins are available:
+- Checkbox-based row selection
+- Multi-page selection using batch input
+- API-based pagination
+- Dynamic UI controls using overlay panels
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It integrates the public **Art Institute of Chicago API** to fetch and display artworks.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ✅ Paginated table using `Paginator`
+- ✅ Checkbox selection with PrimeReact `DataTable`
+- ✅ Select rows across multiple pages
+- ✅ Batch row selection using number input in `OverlayPanel`
+- ✅ Row click mode toggle
+- ✅ Loading indicator with `react-loading-indicators`
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/primereact-pagination-example.git
+cd primereact-pagination-example
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+# or
+npm start
+```
+
+---
+
+## 🛠 Technologies Used
+
+- [React](https://reactjs.org/)
+- [PrimeReact](https://primereact.org/)
+- [PrimeIcons](https://primefaces.org/primeicons)
+- [React Loading Indicators](https://www.npmjs.com/package/react-loading-indicators)
+
+---
+
+## 🧠 How It Works
+
+### Data Fetching
+
+- Data is fetched using a custom `useFetch` hook from the Art Institute of Chicago API.
+- Pagination is controlled via the API `page` parameter.
+
+### Row Selection
+
+- Selection mode is controlled by a toggle (`InputSwitch`).
+- In **checkbox mode**, you can select individual rows or use the header checkbox to select all.
+- A custom dropdown (`OverlayPanel`) allows you to input a number of rows to select (e.g., select next 25 rows).
+- Selected rows persist even when you navigate between pages.
+
+### Overlay Interaction
+
+- The arrow (`˅`) in the header opens an `OverlayPanel`.
+- Enter a number (e.g., 25) and submit to select that many rows across pages (in batches of 12).
+- The logic ensures rows are selected as new pages load, using React state tracking.
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── App.tsx              # Main component with DataTable logic
+├── hooks/
+│   └── useFetch.ts      # Custom fetch hook for paginated API calls
+├── main.tsx             # React entry point
+└── styles/
+    └── index.css        # Global styles and PrimeReact themes
+```
+
+---
+
+## 🔧 Customization
+
+- You can modify the API endpoint in `baseURL` to fetch different data.
+- Adjust the row selection logic to work with different batch sizes.
+- Add filters or additional column data depending on your use case.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙋‍♂️ Author
+
+Created by [Your Name]  
+Feel free to contribute or open issues!
